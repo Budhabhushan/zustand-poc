@@ -88,6 +88,7 @@ const useHabitStore = create<HabitState>()(
                 isLoading: false,
               });
             } catch (error) {
+              console.log("error", error);
               set({ error: "Failed to fetch habits", isLoading: false });
             }
           },
